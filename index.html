@@ -70,12 +70,12 @@
                                 <input class="w-50 text-white"
                                     style="background-color: rgba(82, 86, 89, 0.349); margin-left:30px;text-align: center;"
                                     type="text" id="rentForm" ><br><br>
-                                <label for="clothes">Clothes: </label>
+                                <label for="clothesForm">Clothes: </label>
                                 <input
                                     style="background-color: rgba(82, 86, 89, 0.349);margin-left:13px;text-align: center; "
                                     class="w-50 text-white" type="text" id="clothesForm"><br><br>
-                                <div class="text-center"><button class="btn bg-warning  text-center w-50"
-                                        style="font-weight: bold;" id="calculationId">Calculations</button>
+                                <div class="text-center">
+                                    <button class="btn bg-warning  text-center w-50" style="font-weight: bold;" id="calculationId">Calculations</button>
                                 </div>
                             </div>
                             <div class="total-expenses mt-4 text-center">
@@ -85,15 +85,15 @@
                             <div class="saving mt-5">
                                 <label for="save">Save </label>
 
-                                <span class="saving-btn"> <input type="text" id="save" name="lname"> </span>
+                                <span class="saving-btn"> <input type="text" id="save"> </span>
                                 <span class="  m-3 " style="font-size: 20px;">%</span>
 
                                 <button style="width: 30%; padding: 15px 0; margin-top: -10px; font-weight: bold;"
-                                    class="btn bg-warning text-center ">Save</button>
+                                    class="btn bg-warning text-center " id="saveBalance">Save</button>
                             </div>
                             <div class="text-center mt-5">
-                                <h4>Saving Amount: 00</h4>
-                                <h4>Remaining Balance: 00
+                                <h4 id="saving">Saving Amount: 00</h4>
+                                <h4 id="remaining">Remaining Balance: 00
                                 </h4>
                             </div>
                         </div>

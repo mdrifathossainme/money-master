@@ -1,30 +1,32 @@
-document.getElementById('calculationId').addEventListener('click',function(){
-   const income= document.getElementById('income');
-   const incomeValue=income.value;
-   const incomePar= parseFloat(incomeValue);
+function incomeExpensessValue(inputall){
+   const income = document.getElementById(inputall);
+   const incomeValue = income.value;
+   const incomePar = parseFloat(incomeValue);
+   return incomePar
+}
+function incomeExpensessInner(inputInnerText){
+   const income = document.getElementById(inputInnerText);
+   return income;
+}
+document.getElementById('calculationId').addEventListener('click', function () {
+      const income =incomeExpensessValue('income');
+     
+      const foodForm =incomeExpensessValue('foodForm');
+ 
+      const rentForm =incomeExpensessValue('rentForm');
+ 
+      const clothesForm=incomeExpensessValue('clothesForm');
 
-   const balamce= document.getElementById('balance');
-   // const balamceInner= balamce.innerText;
-   // const balamcePar= parseFloat(balamceInner);
-   const totalExpens= document.getElementById('expense');
-   const expensInner=totalExpens.innerText;
-   const expensPar= parseFloat(expensInner);
+      const allExpance= foodForm +rentForm+clothesForm;
 
+      const toalatExpance = incomeExpensessInner('expense');
+      const Expance= toalatExpance.innerText=allExpance;
 
-   const foodExpenses= document.getElementById('foodForm')
-   const foodValue=foodExpenses.value;
-   const foodPar= parseFloat(foodValue);
+      const balamce =incomeExpensessInner('balance');
 
-   const rentExpenses= document.getElementById('rentForm')
-   const rentValue=rentExpenses.value;
-   const rentPar= parseFloat(rentValue);
+      balamce.innerText=income-Expance;
+});
 
-   const clothesExpenses= document.getElementById('clothesForm')
-   const clothesValue=clothesExpenses.value;
-   const clothesPar= parseFloat(clothesValue);
-
-   const TotalEx=expense.innerText=foodPar+rentPar+clothesPar; 
-
-   balamce.innerText= incomePar - TotalEx;
-
+document.getElementById('saveBalance').addEventListener('click', function () {
+  
 });
