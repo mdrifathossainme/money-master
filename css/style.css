@@ -1,0 +1,33 @@
+ body{
+        padding: 0;
+        margin: 0;
+        font-family: 'Balsamiq Sans', cursive;
+    }
+    input{
+        background-color: rgba(82, 86, 89, 0.349);
+        color: #fff;
+    }
+    .saving-btn input {
+        
+        margin-left: 13px;
+        width: 40%;
+        padding: 12px 0;
+        text-align: center;
+
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        .secend-part {
+            padding: 10px 20px;
+        }
+
+        .parcen {
+            padding: 0;
+            margin: 0;
+        }
+
+        .saving-btn input {
+            width: 30%;
+        }
+    }

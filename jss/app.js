@@ -1,8 +1,22 @@
 function incomeExpensessValue(inputall){
    const income = document.getElementById(inputall);
-   const incomeValue= income.value;
-   const incomePar = parseFloat(incomeValue);
-   return incomePar
+   if(income.value>=0){
+      if(isNaN(income.value)){
+         alert('Please enter onyl number')
+         return;
+      }
+      else{
+         const incomeValue= income.value;
+         const incomePar = parseFloat(incomeValue);
+         return incomePar;
+      }
+      
+   }
+   else{
+      alert('Please enter a positive  & onyl number')
+      return;
+   }
+   
 }
 function incomeExpensessInner(inputInnerText){
    const income = document.getElementById(inputInnerText);
@@ -21,19 +35,43 @@ document.getElementById('calculationId').addEventListener('click', function () {
       const allExpance= foodForm+rentForm+clothesForm;
 
       const toalatExpance = incomeExpensessInner('expense');
-      const Expance= toalatExpance.innerText=allExpance;
 
       const balamce =incomeExpensessInner('balance');
+      if(income>= allExpance){
+         const Expance= toalatExpance.innerText=allExpance;
+         balamce.innerText=income-Expance;
+      }
+      else{
+         alert('You dont have that much money to spend')
+      }
 
-      balamce.innerText=income-Expance;
+     
 });
 
 document.getElementById('saveBalance').addEventListener('click', function () {
    const saveForm= incomeExpensessValue('saveForm');
-   const balamce =incomeExpensessInner('balance')
-   const parsent = balamce.innerText/100*saveForm;
+   const income =document.getElementById('income');
+   const parsent = income.value/100*saveForm;
+   const balamce =incomeExpensessInner('balance');
    const saving= document.getElementById('saving')
    const remaining= document.getElementById('remaining')
-   saving.innerText=parsent;
-   remaining.innerText= balamce.innerText-parsent;
+    const savingBalance =  saving.innerText=parsent;
+      
+   if(savingBalance<=balamce.innerText){
+      remaining.innerText= balamce.innerText-parsent;
+   }
+   else(
+      alert('You have spent too much. You are spending so much that you have no money to save')
+
+   )
 });
+    var number='aasss';
+
+if(typeof(number)=="string")
+{
+   console.log('not sumbar')
+}
+else(typeof(number)=="number")
+{
+   console.log('sumbar')
+}
